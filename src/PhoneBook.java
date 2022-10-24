@@ -1,5 +1,17 @@
 import java.util.*;
 
+//Programmer: Quinn Murphy
+//Date: 10/20/22
+//Assignment 1: PhoneBook
+//Class: CS145
+//References: StackOverflow, YouTube, 
+ // class discussion page
+// Here is the phonebook class. It is 
+// seperate from PhoneBookManager,
+// but includes the first initialization
+// of the phonebook object, and the toString.
+
+
 // Phone book start here
 public class PhoneBook {
     String name;
@@ -39,12 +51,28 @@ public class PhoneBook {
     }
 
 }
+
+//Programmer: Quinn Murphy
+//Date: 10/20/22
+//Assignment 1: PhoneBook
+//Class: CS145
+//References: StackOverflow, YouTube, 
+			   // class discussion page
+// the PhoneBookManager class. Has the viewcontacts, 
+// add, modify, and delete functions. 
+
+
  class PhoneBookManager {
     PhoneBook start;
     void viewContacts() {
+    	// simple kind of toString method.
+    	// we use system.out.format to get out 
+    	// name address city and number to display in a nice manner.
         PhoneBook temp = start;
         boolean isEmpty = true;
         if (temp != null)
+        	// since we set temp to start, we are head of list...
+        	// so while temp has strings, print them.
             System.out.format("%-10s%-10s%-10s%-10s\n", "Name", "Address", "City", "Number");
         while (temp != null) {
             System.out.format("%-10s%-10s%-10s%-10s\n", temp.name, temp.address, temp.city, temp.PhoneNumber);
@@ -92,6 +120,10 @@ public class PhoneBook {
             temp = temp.next;
         }
         if (found) {
+        	// again, gives user options to modify.
+        	// sets them equal to strings, and puts
+        	// strings into node by setting the 
+        	// temp to our new strings. It works!
             Scanner scan = new Scanner(System.in);
             System.out.println(temp.toString());
             System.out.println("enter new Details");

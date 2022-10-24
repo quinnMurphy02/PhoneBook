@@ -87,7 +87,7 @@ public class mainClass {
 	                
 	            case 5: 
 	            	System.out.println("Thanks for using the phone book!");
-	            	System.exit(0);
+	            	System.exit(0); // will just leave program
 	    			quit = false;
 	    			break;
 	            	
